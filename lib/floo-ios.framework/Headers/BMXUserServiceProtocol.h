@@ -45,7 +45,7 @@
 
  @param error 错误码
  */
-- (void)userSignOut:(BMXError *)error;
+- (void)userSignOut:(BMXError *)error userId:(long long)userId;
 
 /**
  * 同步用户信息更新（其他设备操作发生用户信息变更）

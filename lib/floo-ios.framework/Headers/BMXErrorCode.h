@@ -102,5 +102,10 @@ typedef NS_ENUM(NSUInteger, BMXErrorCode) {
     BMXServerLicenseLimit,
     BMXServerAppFrozen,
     BMXServerTooManyRequest,
+    BMXServerNotAllowOpenRegister,
+    BMXServerFireplaceUnknownError,
+    BMXServerResponseInvalid,
+    BMXServerInvalidUploadUrl
+
 };
 

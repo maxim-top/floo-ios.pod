@@ -108,9 +108,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 退出登录
  **/
-- (void)signOutWithcompletion:(void(^)(BMXError *error))aCompletionBlock;
-
-- (void)signOutID:(NSInteger)userID Withcompletion:(void(^)(BMXError *error))aCompletionBlock;
+- (void)signOutID:(NSInteger)userID
+ignoreUnbindDevice:(BOOL)ignoreUnbindDevice
+   completion:(void(^)(BMXError *error))aCompletionBlock;
 
 
 /**

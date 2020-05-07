@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'floo-ios'
-  s.version          = '2.2.0'
+  s.version          = '2.2.2'
   s.summary          = '美信拓扑 IM SDK'
 
 # This description is used to generate tags and improve search results.
