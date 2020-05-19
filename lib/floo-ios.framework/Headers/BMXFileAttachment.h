@@ -59,6 +59,14 @@ NS_ASSUME_NONNULL_BEGIN
                    displayName:(NSString *)displayName
               conversationId:(NSString *)conversationId;
 
+/// 初始化文件BMXFileAttachment
+/// @param path 文件路径
+/// @param displayName 文件名称
+/// @param conversationId 会话id
+- (instancetype)initWithPath:(NSString *)path
+                 displayName:(NSString *)displayName
+              conversationId:(NSString *)conversationId;
+
 /**
  初始化文件BMXFileAttachment
 
