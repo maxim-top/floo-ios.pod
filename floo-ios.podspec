@@ -43,5 +43,6 @@ Pod::Spec.new do |s|
   s.libraries = 'sqlite3','c++abi',  'stdc++', 'z', 'c++', 'resolv'
   s.vendored_library = 'lib/libcrypto/libcrypto.a'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
   
 end
