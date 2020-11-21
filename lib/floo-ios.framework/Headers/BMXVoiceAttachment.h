@@ -18,7 +18,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// <#Description#>
 @interface BMXVoiceAttachment : BMXFileAttachment
 
 /**
@@ -28,20 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-
-/**
- 初始化BMXFileAttachment
-
- @param url 音频路径
- @param displayName 显示名称
- @param fileLength 文件大小
- @param duration 时长
- @return BMXFileAttachment
- */
-- (instancetype)initWithUrlStr:(NSString *)url
-                   displayName:(NSString *)displayName
-                    fileLength:(NSInteger)fileLength
-                      duration:(NSInteger)duration;
 
 /**
  初始化BMXFileAttachment

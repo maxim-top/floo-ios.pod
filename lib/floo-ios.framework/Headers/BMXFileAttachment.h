@@ -67,17 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
                  displayName:(NSString *)displayName
               conversationId:(NSString *)conversationId;
 
-/**
- 初始化文件BMXFileAttachment
 
- @param url url
- @param displayName 名称显示
- @param fileLength 文件长度
- @return BMXFileAttachment
- */
-- (instancetype)initWithUrlStr:(NSString *)url
-                   displayName:(NSString *)displayName
-                    fileLength:(NSInteger)fileLength;
 
 @end
 
