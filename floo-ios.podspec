@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'floo-ios'
-  s.version          = '3.5'
+  s.version          = '3.6'
   s.summary          = '美信拓扑 IM SDK'
 
 
