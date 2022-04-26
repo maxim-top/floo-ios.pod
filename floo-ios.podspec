@@ -25,25 +25,18 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://www.maximtop.com/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => 'floo-ios-release/LICENSE' }
   s.author           = { 'maximtop’' => 'im.maxim.top@gmail.com' }
-  #s.source           = { :http => 'https://package.maximtop.com/floo-ios-3.9.1-20220424.zip' }
-  s.source           = { :git => 'https://github.com/maxim-top/floo-ios.pod.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :http => 'https://package.maximtop.com/floo-ios-3.9.1-20220424.zip' }
 
   s.ios.deployment_target = '9.0'
 
-  # s.source_files = 'lib/floo-ios.framework/Headers/*.{h}'
-  s.vendored_frameworks = 'lib/floo-ios.framework'
+  s.vendored_frameworks = 'floo-ios-release/lib/floo-ios.framework'
   
-  # s.resource_bundles = {
-  #   'floo-ios' => ['floo-ios/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'QuartzCore', 'ImageIO', 'CoreVideo', 'CoreMedia', 'CoreGraphics', 'AVFoundation', 'AssetsLibrary'
   s.libraries = 'sqlite3','c++abi',  'stdc++', 'z', 'c++', 'resolv'
-  s.vendored_library = 'lib/libcrypto/libcrypto.a'
+  s.vendored_libraries = 'floo-ios-release/lib/libcrypto/libcrypto.a'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
   
