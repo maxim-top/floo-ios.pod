@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'floo-ios'
-  s.version          = '3.10.1'
-  s.summary          = '美信拓扑 IM SDK'
+  s.version          = '3.11.1'
+  s.summary          = '蓝莺 IM SDK'
 
 
 # This description is used to generate tags and improve search results.
@@ -23,11 +23,11 @@ Pod::Spec.new do |s|
 
                         DESC
 
-  s.homepage         = 'https://www.maximtop.com/'
+  s.homepage         = 'https://www.lanyingim.com/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'floo-ios-release/LICENSE' }
   s.author           = { 'maximtop’' => 'im.maxim.top@gmail.com' }
-  s.source           = { :http => 'https://package.maximtop.com/floo-ios-3.10.1-20220607.zip' }
+  s.source           = { :http => 'https://package.maximtop.com/floo-ios-3.11.1-20220711.zip' }
 
   s.ios.deployment_target = '9.0'
 
