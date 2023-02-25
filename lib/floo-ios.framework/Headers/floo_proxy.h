@@ -7057,6 +7057,21 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
 @interface BMXVideoAttachment : BMXFileAttachment
   /**
    * @brief 构造函数，构建发送视频消息附件
+   * @param aData 视频数据
+   * @param thumbnailData 缩略图数据
+   * @param duration 视频片段时长
+   * @param size 视频大小，宽度和高度
+   * @param displayName 文件展示名
+   * @param conversationId 会话ID
+   **/
+- (id)initWithData:(NSData *)aData
+         thumbnailData:(NSData *)thumbnailData
+         duration:(int)duration
+         size:(BMXMessageAttachmentSize *) size
+         displayName:(NSString *)displayName
+         conversationId:(long long)conversationId;
+  /**
+   * @brief 构造函数，构建发送视频消息附件
    * @param path 文件的本地路径
    * @param duration 视频片段时长
    * @param size 视频大小，宽度和高度
