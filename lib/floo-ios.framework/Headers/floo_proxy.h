@@ -2054,6 +2054,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  */
 - (NSString*)getRTCPin;
 /**
+ * @brief 是否对方异常退出。
+ * @return BOOL
+ */
+- (BOOL)isPeerDrop;
+/**
  * @brief 序列化操作
  * @return NSString
  */
