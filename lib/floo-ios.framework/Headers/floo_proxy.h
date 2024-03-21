@@ -1983,6 +1983,19 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @brief 获取当前的推送消息中badge计数
  * @return BadgeCountType
  */
+
+/**
+ * @brief 设置是否禁用push
+ * @param noPush
+ */
+- (void)setNoPush:(BOOL)noPush;
+
+/**
+ * @brief 获取是否禁用Push设置
+ * @return bool
+ */
+- (BOOL)getNoPush;
+
 - (BMXMessageConfig_BadgeCountType)getBadgeCountType;
 /**
  * @brief 获取当前的推送消息中badge计数
