@@ -858,7 +858,8 @@ typedef NS_ENUM(NSInteger, BMXGroup_UpdateInfoType) {
     BMXGroup_UpdateInfoType_MsgMuteMode,    /// 修改是否提醒消息
     BMXGroup_UpdateInfoType_ReadAckMode,    /// 是否开启群消息已读功能
     BMXGroup_UpdateInfoType_HistoryVisibleMode,/// 新群成员是否可见群历史聊天记录
-    BMXGroup_UpdateInfoType_BanExpireTime   /// 群组全员禁言到期时间
+    BMXGroup_UpdateInfoType_BanExpireTime,   /// 群组全员禁言到期时间
+    BMXGroup_UpdateInfoType_HideMemberInfoMode   /// 群是否对群成员隐藏其它群成员个人信息展示
 };
 
 /**
@@ -2935,6 +2936,16 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  * @param uid 调试log接收者id
  */
 - (void)setDebugLogReceiverId:(long long)uid;
+/**
+ * @brief 获取app的配置。
+ * @return NSString
+ */
+- (NSString*)getAppConfig;
+/**
+ * @brief 设置app的配置。
+ * @param appConfig app的配置
+ */
+- (void)setAppConfig:(NSString*)appConfig;
 - (void)dealloc;
 @end
 
@@ -5323,6 +5334,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    * @return BOOL
    **/
 - (BOOL)enableReadAck;
+/**
+ * @brief 群成员是否可见群内其它成员个人信息
+ * @return BOOL
+ **/
+- (BOOL)hideMemberInfo;
   /**
    * @brief 是否可以加载显示历史聊天记录
    * @return BOOL
@@ -5779,6 +5795,14 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    **/
 - (BMXErrorCode)setEnableReadAck:(BMXGroup*)group enable:(BOOL)enable;
   /**
+   * @brief 设置群成员是否开可见群其它成员个人信息
+   * @param group 进行操作的群组
+   * @param hide 是否隐藏
+   * @return BMXErrorCode
+   **/
+- (BMXErrorCode)setHideMemberInfo:(BMXGroup*)group enable:(BOOL)hide;
+
+  /**
    * @brief 设置群成员是否开可见群历史聊天记录
    * @param group 进行操作的群组
    * @param enable 是否开启
@@ -6216,6 +6240,12 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    * @return BMXErrorCode
    **/
 - (void)setEnableReadAck:(BMXGroup*)group enable:(BOOL)enable completion:(void (^)(BMXError *aError)) resBlock;
+  /**
+   * @brief 设置群成员是否开可见群其它成员个人信息
+   * @param group 进行操作的群组
+   * @param hide 是否隐藏
+   **/
+- (void)setHideMemberInfo:(BMXGroup*)group enable:(BOOL)hide completion:(void (^)(BMXError *aError)) resBlock;
   /**
    * @brief 设置群成员是否开可见群历史聊天记录
    * @param group 进行操作的群组
