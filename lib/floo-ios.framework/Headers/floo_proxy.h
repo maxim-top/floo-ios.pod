@@ -120,6 +120,12 @@ extern "C" {
  *     "The path or file does not exist."
  * BMXErrorCode_DbOperationFailed:
  *     "The local database operation failed."
+ * BMXErrorCode_SignInInvalidParam:
+ *     "The user login input parameters are invalid."
+ * BMXErrorCode_SignInUserMapDbOperationFailed:
+ *     "The user login user map database open failed."
+ * BMXErrorCode_SignInUserDbOperationFailed:
+ *     "The user login user database open failed."
  * BMXErrorCode_SignInCancelled:
  *     "The user has cancelled the login operation."
  * BMXErrorCode_SignInTimeout:
@@ -280,6 +286,32 @@ extern "C" {
  *     "A connection failure error occurred on the server."
  * BMXErrorCode_ServerDNSFailed:
  *     "The current server failed to obtain the dns list."
+ * BMXErrorCode_ServerDNSFetchFailed:
+ *     "The current server failed to fetch dns list from dns server."
+ * BMXErrorCode_ServerDNSUserCancelFailed:
+ *     "The current server user cancel fetch dns list from dns server."
+ * BMXErrorCode_ServerDNSParseDataFailed:
+ *     "The current server failed to parse dns json data fetch from dns server."
+ * BMXErrorCode_ServerDNSAppIdEmpty:
+ *     "The current server failed to fetch dns list from dns server beacuse of app id empty."
+ * BMXErrorCode_ServerDNSAppIdInvalid:
+ *     "The current server failed to fetch dns list from dns server because of app id not invalid."
+ * BMXErrorCode_ServerDNSHealthCheckFailed:
+ *     "The current server failed to health check dns server beacuse of network problem."
+ * BMXErrorCode_ServerPrivateDNSParseDataFailed:
+ *     "The current server use private config and dns json data parse failed."
+ * BMXErrorCode_ServerTokenResponseInvalid:
+ *     "The current server token response json data parse failed."
+ * BMXErrorCode_ServerTokenRequestTooMany:
+ *     "The current server token request too many times, need retry later."
+ * BMXErrorCode_ServerTokenRequestParameterInvalid:
+ *     "The current server token request input parameter invalid."
+ * BMXErrorCode_ServerTokenRequestAppIdMissing:
+ *     "The current server token request app id missing."
+ * BMXErrorCode_ServerTokenRequestAppIdInvalid:
+ *     "The current server token request app id invalid."
+ * BMXErrorCode_ServerTokenAppStatusNotNormal:
+ *     "The current server token request app server status not normal."
  * BMXErrorCode_ServerNeedReconnected:
  *     "The current server has changed and needs to be reconnected."
  * BMXErrorCode_ServerFileUploadUnknownError:
@@ -335,6 +367,9 @@ typedef NS_ENUM(NSInteger, BMXErrorCode) {
     BMXErrorCode_InvalidParam,
     BMXErrorCode_NotFound,
     BMXErrorCode_DbOperationFailed,
+    BMXErrorCode_SignInInvalidParam,
+    BMXErrorCode_SignInUserMapDbOperationFailed,
+    BMXErrorCode_SignInUserDbOperationFailed,
     BMXErrorCode_SignInCancelled,
     BMXErrorCode_SignInTimeout,
     BMXErrorCode_SignInFailed,
@@ -415,6 +450,19 @@ typedef NS_ENUM(NSInteger, BMXErrorCode) {
     BMXErrorCode_ServerTimeOut,
     BMXErrorCode_ServerConnectFailed,
     BMXErrorCode_ServerDNSFailed,
+    BMXErrorCode_ServerDNSFetchFailed,
+    BMXErrorCode_ServerDNSUserCancelFailed,
+    BMXErrorCode_ServerDNSParseDataFailed,
+    BMXErrorCode_ServerDNSAppIdEmpty,
+    BMXErrorCode_ServerDNSAppIdInvalid,
+    BMXErrorCode_ServerDNSHealthCheckFailed,
+    BMXErrorCode_ServerPrivateDNSParseDataFailed,
+    BMXErrorCode_ServerTokenResponseInvalid,
+    BMXErrorCode_ServerTokenRequestTooMany,
+    BMXErrorCode_ServerTokenRequestParameterInvalid,
+    BMXErrorCode_ServerTokenRequestAppIdMissing,
+    BMXErrorCode_ServerTokenRequestAppIdInvalid,
+    BMXErrorCode_ServerTokenAppStatusNotNormal,
     BMXErrorCode_ServerNeedReconnected,
     BMXErrorCode_ServerFileUploadUnknownError,
     BMXErrorCode_ServerFileDownloadUnknownError,
