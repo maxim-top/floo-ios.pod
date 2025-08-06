@@ -166,6 +166,8 @@ extern "C" {
  *     "The old password does not match when the password is changed."
  * BMXErrorCode_UserSigningIn:
  *     "The user is signning in."
+ * BMXErrorCode_UserKickedByAppDeprecated:
+ *     "The version of the app is deprecated."
  * BMXErrorCode_PushTokenInvalid:
  *     "The push token is not valid."
  * BMXErrorCode_PushAliasBindByOtherUser:
@@ -390,6 +392,7 @@ typedef NS_ENUM(NSInteger, BMXErrorCode) {
     BMXErrorCode_UserCancel,
     BMXErrorCode_UserOldPasswordNotMatch,
     BMXErrorCode_UserSigningIn,
+    BMXErrorCode_UserKickedByAppDeprecated,
     BMXErrorCode_PushTokenInvalid = 200,
     BMXErrorCode_PushAliasBindByOtherUser,
     BMXErrorCode_PushAliasTokenNotMatch,
