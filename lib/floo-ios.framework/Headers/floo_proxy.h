@@ -3973,6 +3973,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  */
 - (BMXSDKConfig*)getSDKConfig;
 /**
+ * @brief 获取app状态
+ * @return NSString* normal-正常 frozen-冻结 banned-封禁 revoked-已失效
+ */
+- (NSString*)getAppStatus;
+/**
  * @brief 注册新用户，username和password是必填参数
  * @param username 用户名
  * @param password 用户密码
