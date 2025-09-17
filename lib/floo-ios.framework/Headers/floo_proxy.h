@@ -3978,6 +3978,11 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
  */
 - (NSString*)getAppStatus;
 /**
+ * @brief 获取API接口IP列表
+ * @return NSString*
+ */
+- (NSString*)getRatelIpList;
+/**
  * @brief 注册新用户，username和password是必填参数
  * @param username 用户名
  * @param password 用户密码
