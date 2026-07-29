@@ -1316,6 +1316,12 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
 - (NSString*)getMGroupNickname;
 - (void)setMCreateTime:(long long)value;
 - (long long)getMCreateTime;
+- (void)setMAvatar:(NSString*)value;
+- (NSString*)getMAvatar;
+- (void)setMNickname:(NSString*)value;
+- (NSString*)getMNickname;
+- (void)setMUsername:(NSString*)value;
+- (NSString*)getMUsername;
 - (void)dealloc;
 @end
 
@@ -5500,6 +5506,14 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    **/
 - (BMXErrorCode)getMembersNickname:(BMXGroup*)group members:(ListOfLongLong*)members list:(BMXGroupMemberList*)list;
   /**
+   * @brief 批量获取指定群成员信息
+   **/
+- (BMXErrorCode)getMembersInfo:(BMXGroup*)group members:(ListOfLongLong*)members list:(BMXGroupMemberList*)list;
+  /**
+   * @brief 搜索群成员
+   **/
+- (BMXErrorCode)searchMembersWithGroup:(BMXGroup*)group keyword:(NSString*)keyword result:(BMXGroupMemberResultPage*)result cursor:(NSString*)cursor pageSize:(int)pageSize;
+  /**
    * @brief 分页获取群组邀请列表
    * @param result 分页获取的群组邀请列表，传入指向为空的shared_ptr对象函数执行后从此处获取结果
    * @param cursor 分页获取的起始cursor，第一次传入为空，后续传入上次操作返回的result中的cursor
@@ -5958,6 +5972,14 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
    * @return BMXErrorCode
    **/
 - (void)getMembersNickname: (BMXGroup*)group members:(ListOfLongLong*)members completion:(void (^)(BMXGroupMemberList* res, BMXError *aError)) resBlock;
+  /**
+   * @brief 批量获取指定群成员信息
+   **/
+- (void)getMembersInfo:(BMXGroup*)group members:(ListOfLongLong*)members completion:(void (^)(BMXGroupMemberList* res, BMXError *aError))resBlock;
+  /**
+   * @brief 搜索群成员
+   **/
+- (void)searchMembersWithGroup:(BMXGroup*)group keyword:(NSString*)keyword cursor:(NSString*)cursor pageSize:(int)pageSize completion:(void (^)(BMXGroupMemberResultPage* res, BMXError *aError))resBlock;
   /**
    * @brief 分页获取群组邀请列表
    * @param result 分页获取的群组邀请列表，传入指向为空的shared_ptr对象函数执行后从此处获取结果
@@ -7568,4 +7590,3 @@ NSString* ObjcGetErrorMessage(BMXErrorCode errorCode);
 #ifdef __cplusplus
 }
 #endif
-

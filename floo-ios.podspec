@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'floo-ios'
-  s.version          = '4.5.15'
+  s.version          = '4.5.16'
   s.summary          = '蓝莺 IM SDK'
 
 
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'floo-ios-release/LICENSE' }
   s.author           = { 'maximtop’' => 'im.maxim.top@gmail.com' }
-  s.source           = { :http => 'https://github.com/maxim-top/floo-ios/releases/download/v4.5.15/floo-ios-4.5.15-20260408.zip' }
+  s.source           = { :http => 'https://github.com/maxim-top/floo-ios/releases/download/v4.5.16/floo-ios-4.5.16-20260729.zip' }
 
   s.ios.deployment_target = '15.0'
 
